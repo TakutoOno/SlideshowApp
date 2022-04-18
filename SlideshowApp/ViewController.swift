@@ -55,19 +55,21 @@ class ViewController: UIViewController {
         expantionViewController.image = firstImageView.image
               self.present(expantionViewController, animated: true, completion: nil)
         
-        // タイマーを停止する
-        timer.invalidate()
-        
-        // タイマーを削除しておく(timer.invalidateだけだとtimerがnilにならないため)
-        timer = nil
-        
-        //ボタンの名前を変える
-        startPauseButton.setTitle("再生", for: .normal)
-        
-        //他のボタンを押せるようにする
-        moveOnButton.isEnabled = true
-        backButton.isEnabled = true
-        
+        if timer != nil {
+            // タイマーを停止する
+            timer.invalidate()
+            
+            // タイマーを削除しておく(timer.invalidateだけだとtimerがnilにならないため)
+            timer = nil
+            
+            //ボタンの名前を変える
+            startPauseButton.setTitle("再生", for: .normal)
+            
+            //他のボタンを押せるようにする
+            moveOnButton.isEnabled = true
+            backButton.isEnabled = true
+
+        }
     }
     
     

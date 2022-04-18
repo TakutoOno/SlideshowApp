@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEA4A54628094495006885EA /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEA4A54528094495006885EA /* sky.jpg */; };
+		AEC503DF28094C6900038694 /* fox.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AEC503DE28094C6900038694 /* fox.jpeg */; };
+		AEC503E128094C8D00038694 /* panda.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AEC503E028094C8D00038694 /* panda.jpeg */; };
+		AEC503E328094CAD00038694 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEC503E228094CAD00038694 /* green.jpg */; };
+		AEC503E528094CE100038694 /* sakura.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEC503E428094CE100038694 /* sakura.jpg */; };
 		AEDD4AC32807AA8B005DFF4B /* ExpantionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD4AC22807AA8B005DFF4B /* ExpantionViewController.swift */; };
-		AEDD4ACA2807C072005DFF4B /* android in Resources */ = {isa = PBXBuildFile; fileRef = AEDD4AC62807C072005DFF4B /* android */; };
-		AEDD4ACF2807E705005DFF4B /* ios in Resources */ = {isa = PBXBuildFile; fileRef = AEDD4ACE2807E705005DFF4B /* ios */; };
 		AEEC01B32806AAE6000E0468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC01B22806AAE6000E0468 /* AppDelegate.swift */; };
 		AEEC01B52806AAE6000E0468 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC01B42806AAE6000E0468 /* SceneDelegate.swift */; };
 		AEEC01B72806AAE6000E0468 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC01B62806AAE6000E0468 /* ViewController.swift */; };
@@ -19,9 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AEA4A54528094495006885EA /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
+		AEC503DE28094C6900038694 /* fox.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fox.jpeg; sourceTree = "<group>"; };
+		AEC503E028094C8D00038694 /* panda.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panda.jpeg; sourceTree = "<group>"; };
+		AEC503E228094CAD00038694 /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
+		AEC503E428094CE100038694 /* sakura.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sakura.jpg; sourceTree = "<group>"; };
 		AEDD4AC22807AA8B005DFF4B /* ExpantionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpantionViewController.swift; sourceTree = "<group>"; };
-		AEDD4AC62807C072005DFF4B /* android */ = {isa = PBXFileReference; lastKnownFileType = folder; name = android; path = ../../../../Downloads/AppIcons/android; sourceTree = "<group>"; };
-		AEDD4ACE2807E705005DFF4B /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = "../../../Downloads/ImageSets-6/ios"; sourceTree = "<group>"; };
 		AEEC01AF2806AAE6000E0468 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC01B22806AAE6000E0468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEEC01B42806AAE6000E0468 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				AEEC01B12806AAE6000E0468 /* SlideshowApp */,
-				AEDD4ACE2807E705005DFF4B /* ios */,
 				AEEC01B02806AAE6000E0468 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,8 +75,12 @@
 				AEEC01B82806AAE6000E0468 /* Main.storyboard */,
 				AEEC01BB2806AAE7000E0468 /* Assets.xcassets */,
 				AEEC01BD2806AAE7000E0468 /* LaunchScreen.storyboard */,
+				AEC503E428094CE100038694 /* sakura.jpg */,
+				AEC503E228094CAD00038694 /* green.jpg */,
+				AEC503E028094C8D00038694 /* panda.jpeg */,
+				AEC503DE28094C6900038694 /* fox.jpeg */,
+				AEA4A54528094495006885EA /* sky.jpg */,
 				AEEC01C02806AAE7000E0468 /* Info.plist */,
-				AEDD4AC62807C072005DFF4B /* android */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -134,11 +143,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEDD4ACA2807C072005DFF4B /* android in Resources */,
+				AEC503E528094CE100038694 /* sakura.jpg in Resources */,
+				AEC503E328094CAD00038694 /* green.jpg in Resources */,
+				AEC503DF28094C6900038694 /* fox.jpeg in Resources */,
+				AEA4A54628094495006885EA /* sky.jpg in Resources */,
+				AEC503E128094C8D00038694 /* panda.jpeg in Resources */,
 				AEEC01BF2806AAE7000E0468 /* LaunchScreen.storyboard in Resources */,
 				AEEC01BC2806AAE7000E0468 /* Assets.xcassets in Resources */,
 				AEEC01BA2806AAE6000E0468 /* Main.storyboard in Resources */,
-				AEDD4ACF2807E705005DFF4B /* ios in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

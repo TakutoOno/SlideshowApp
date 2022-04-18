@@ -27,7 +27,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startPauseButton: UIButton!
     
-    
+    let Image = [UIImage(named: "panda.jpeg"),
+                 UIImage(named: "fox.jpeg"),
+                 UIImage(named: "sky.jpg"),
+                 UIImage(named: "sakura.jpg"),
+                 UIImage(named: "green.jpg")]
     
     
     override func viewDidLoad() {
@@ -37,7 +41,7 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "toExpantionVC", sender: nil)
         // Do any additional setup after loading the view.
         
-        firstImageView.image = UIImage(named: "panda")
+        firstImageView.image = UIImage(named: "panda.jpeg")
         
     }
 
@@ -50,6 +54,20 @@ class ViewController: UIViewController {
         let expantionViewController = self.storyboard?.instantiateViewController(withIdentifier: "toExpantionVC") as! ExpantionViewController
         expantionViewController.image = firstImageView.image
               self.present(expantionViewController, animated: true, completion: nil)
+        
+        // タイマーを停止する
+        timer.invalidate()
+        
+        // タイマーを削除しておく(timer.invalidateだけだとtimerがnilにならないため)
+        timer = nil
+        
+        //ボタンの名前を変える
+        startPauseButton.setTitle("再生", for: .normal)
+        
+        //他のボタンを押せるようにする
+        moveOnButton.isEnabled = true
+        backButton.isEnabled = true
+        
     }
     
     
@@ -67,7 +85,7 @@ class ViewController: UIViewController {
         }
         
         //画像一覧
-        firstImageView.image = [ #imageLiteral(resourceName: "panda"), #imageLiteral(resourceName: "fox"), #imageLiteral(resourceName: "sky"), #imageLiteral(resourceName: "sakura"), #imageLiteral(resourceName: "green")][figure]
+        firstImageView.image = Image[figure]
     }
     
     //戻るボタン押した時のコード
@@ -83,7 +101,7 @@ class ViewController: UIViewController {
         }
         
         //画像一覧
-        firstImageView.image = [ #imageLiteral(resourceName: "panda"), #imageLiteral(resourceName: "fox"), #imageLiteral(resourceName: "sky"), #imageLiteral(resourceName: "sakura"), #imageLiteral(resourceName: "green")][figure]
+        firstImageView.image = Image[figure]
     }
     
     //ここより以下はタイマー設定
@@ -94,7 +112,6 @@ class ViewController: UIViewController {
        // スライドショーに使用するタイマーを宣言
        var timer: Timer!
     
-    var firstImageViewSlide = [ #imageLiteral(resourceName: "panda"), #imageLiteral(resourceName: "fox"), #imageLiteral(resourceName: "sky"), #imageLiteral(resourceName: "sakura"), #imageLiteral(resourceName: "green")]
     
     @IBAction func StartPauseButton(_ sender: Any) {
         
@@ -106,11 +123,11 @@ class ViewController: UIViewController {
              // タイマーをセットする
              timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
 
-             tapFirstImageView.isEnabled = false
+             //他のボタンを押せなくする
              moveOnButton.isEnabled = false
              backButton.isEnabled = false
              
-             
+             //ボタンの名前を変える
              startPauseButton.setTitle("停止", for: .normal)
              
 
@@ -122,10 +139,11 @@ class ViewController: UIViewController {
              // タイマーを削除しておく(timer.invalidateだけだとtimerがnilにならないため)
              timer = nil
              
-             tapFirstImageView.isEnabled = true
+             //他のボタンを押せるようにする
              moveOnButton.isEnabled = true
              backButton.isEnabled = true
              
+             //ボタンの名前を変える
              startPauseButton.setTitle("再生", for: .normal)
 
          }
@@ -136,12 +154,12 @@ class ViewController: UIViewController {
          nowIndex += 1
 
          // indexが表示予定の画像の数と同じ場合
-         if (nowIndex == firstImageViewSlide.count) {
+         if (nowIndex == Image.count) {
              // indexを一番最初の数字に戻す
              nowIndex = 0
          }
          // indexの画像をstoryboardの画像にセットする
-         firstImageView.image = firstImageViewSlide[nowIndex]
+         firstImageView.image = Image[nowIndex]
      }
     
     
